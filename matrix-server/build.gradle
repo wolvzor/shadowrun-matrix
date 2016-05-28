@@ -1,0 +1,19 @@
+plugins {
+	id "application"
+}
+
+dependencies {
+	compile (
+		"ch.qos.logback:logback-classic:${libVersions.logback}",
+		"org.slf4j:jul-to-slf4j:${libVersions.slf4j}",
+		project(":matrix-common"),
+		"com.typesafe.akka:akka-actor_${libVersions.scalaMinor}:${libVersions.akka}",
+		"com.typesafe.akka:akka-slf4j_${libVersions.scalaMinor}:${libVersions.akka}",
+	)
+	
+	testCompile (
+		"com.typesafe.akka:akka-testkit_${libVersions.scalaMinor}:${libVersions.akka}",
+	)
+}
+
+mainClassName = "com.wolviegames.shadowrun.matrix.server.Main"
