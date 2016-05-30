@@ -34,6 +34,9 @@ subprojects {
 		config: "1.3.0",
 		mockito: "1.10.19",
 		akka: "2.4.6",
+		guice: "4.0",
+		akkaGuice: "3.1.3",
+		scalaGuice: "4.0.1",
 	]
 	
 	dependencies {

@@ -4,15 +4,22 @@ plugins {
 
 dependencies {
 	compile (
+		project(":matrix-common"),
 		"ch.qos.logback:logback-classic:${libVersions.logback}",
 		"org.slf4j:jul-to-slf4j:${libVersions.slf4j}",
-		project(":matrix-common"),
 		"com.typesafe.akka:akka-actor_${libVersions.scalaMinor}:${libVersions.akka}",
 		"com.typesafe.akka:akka-slf4j_${libVersions.scalaMinor}:${libVersions.akka}",
+		"com.typesafe.akka:akka-stream_${libVersions.scalaMinor}:${libVersions.akka}",
+		"com.google.inject:guice:${libVersions.guice}",
+		"com.google.inject.extensions:guice-multibindings:${libVersions.guice}",
+		"com.google.inject.extensions:guice-assistedinject:${libVersions.guice}",
+		"com.sandinh:akka-guice_${libVersions.scalaMinor}:${libVersions.akkaGuice}",
+		"net.codingwell:scala-guice_${libVersions.scalaMinor}:${libVersions.scalaGuice}",
 	)
 	
 	testCompile (
 		"com.typesafe.akka:akka-testkit_${libVersions.scalaMinor}:${libVersions.akka}",
+		"com.typesafe.akka:akka-stream-testkit_${libVersions.scalaMinor}:${libVersions.akka}",
 	)
 }
 

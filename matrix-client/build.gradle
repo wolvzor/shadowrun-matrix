@@ -4,9 +4,9 @@ plugins {
 
 dependencies {
 	compile (
+		project(":matrix-common"),
 		"ch.qos.logback:logback-classic:${libVersions.logback}",
 		"org.slf4j:jul-to-slf4j:${libVersions.slf4j}",
-		project(":matrix-common"),
 		"com.typesafe.akka:akka-actor_${libVersions.scalaMinor}:${libVersions.akka}",
 		"com.typesafe.akka:akka-slf4j_${libVersions.scalaMinor}:${libVersions.akka}",
 	)
